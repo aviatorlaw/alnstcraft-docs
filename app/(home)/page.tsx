@@ -1,12 +1,12 @@
-import { Layout } from 'fumadocs-ui/layout';
-import { Heading } from 'fumadocs-ui/components/heading';
-import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
+import { Layout } from '@fumadocs/ui/layout'; // <-- Updated this line
+import { Heading } from '@fumadocs/ui/components/heading'; // <-- Updated this line
+import { Accordion, Accordions } from '@fumadocs/ui/components/accordion'; // <-- Updated this line
 
 export default function RulesPage() {
   return (
     <Layout 
-      sidebar={{ enabled: false }} // Removes side document trees for a sleek single page
-      nav={{ title: '⚔️ AlnstCraft' }}
+      sidebar={{ enabled: false }}
+      nav={{ title: 'ALNSTCRAFT' }}
     >
       <main className="container max-w-3xl py-12 px-4 mx-auto">
         <div className="text-center mb-12">

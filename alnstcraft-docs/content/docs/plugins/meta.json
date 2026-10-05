@@ -1,5 +1,6 @@
 {
   "title": "Plugin Info",
+  "root": true,
   "pages": [
     "index"
   ]

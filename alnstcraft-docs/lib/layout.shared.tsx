@@ -7,7 +7,7 @@ export const baseOptions: BaseLayoutProps = {
     title: (
       <div className="flex items-center gap-2">
         <img 
-          src="https://media.aviatorlaw.eu/alnstcraft-banner.png" 
+          src="https://media.aviatorlaw.eu/alnstcraft-icon.png" 
           alt="ALNSTCRAFT Logo" 
           className="w-6 h-6 object-contain rounded"
         />

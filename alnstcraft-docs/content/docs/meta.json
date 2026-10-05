@@ -1,8 +1,6 @@
 {
   "pages": [
-    "---Rules---",
-    "[rules]Rules",
-    "---Plugins---",
-    "[plugins]Plugin Info"
+    "rules",
+    "plugins"
   ]
 }

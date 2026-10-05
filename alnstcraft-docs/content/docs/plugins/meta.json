@@ -1,7 +1,12 @@
 {
   "title": "Plugin Info",
   "root": true,
+  "icon": "server",
   "pages": [
-    "index"
+    "index",
+    "homes-and-warps",
+    "claims",
+    "tradeshops",
+    "pvp"
   ]
 }

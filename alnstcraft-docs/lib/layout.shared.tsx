@@ -1,12 +1,19 @@
+import { DocsLayout } from 'fumadocs-ui/layouts/docs';
+import { source } from '@/lib/source';
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
-import { appName, gitConfig } from './shared';
 
-export function baseOptions(): BaseLayoutProps {
-  return {
-    nav: {
-      // JSX supported
-      title: appName,
-    },
-    githubUrl: `https://github.com/${gitConfig.user}/${gitConfig.repo}`,
-  };
-}
+export const baseOptions: BaseLayoutProps = {
+  nav: {
+    title: (
+      <div className="flex items-center gap-2">
+        <img 
+          src="https://media.aviatorlaw.eu/alnstcraft-banner.png" 
+          alt="ALNSTCRAFT Logo" 
+          className="w-6 h-6 object-contain rounded"
+        />
+        <span className="font-bold">ALNSTCRAFT</span>
+      </div>
+    ),
+  },
+  links: [],
+};

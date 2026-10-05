@@ -1,7 +1,12 @@
 {
   "title": "Rules",
   "root": true,
+  "icon": "book-alert",
   "pages": [
-    "index"
+    "index",
+    "---Categories---",
+    "building-and-claims",
+    "exploits-and-lag",
+    "allowed-mods"
   ]
 }

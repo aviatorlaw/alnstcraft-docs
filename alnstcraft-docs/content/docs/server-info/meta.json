@@ -1,0 +1,9 @@
+{
+  "title": "Server Info",
+  "root": true,
+  "icon": "house-heart",
+  "pages": [
+    "index",
+    "account-linking.mdx"
+  ]
+}

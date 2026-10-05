@@ -2,9 +2,15 @@ import { source } from '@/lib/source';
 import { DocsLayout } from 'fumadocs-ui/layouts/docs';
 import { baseOptions } from '@/lib/layout.shared';
 
-export default function Layout({ children }: LayoutProps<'/docs'>) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <DocsLayout tree={source.getPageTree()} {...baseOptions()}>
+    <DocsLayout
+      {...baseOptions}
+      tree={source.pageTree}
+      sidebar={{
+        defaultOpenLevel: 0,
+      }}
+    >
       {children}
     </DocsLayout>
   );

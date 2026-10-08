@@ -6,25 +6,25 @@ icon: HeartHandshake
 
 import { Cards, Card } from 'fumadocs-ui/components/card';
 import { Callout } from 'fumadocs-ui/components/callout';
-import { Link, ShieldAlert, Blocks, UserCheck, MessageSquare } from 'lucide-react';
+import { UserCheck, ShieldAlert, Blocks } from 'lucide-react';
 
-Welcome to **ALNSTCRAFT**! Below you will find quick access to server connection details, rules, plugin guides, and account linking setup[cite: 3].
+Welcome to **ALNSTCRAFT**! Below you will find connection details, rules, plugin guides, and account linking setup.
 
 <Cards>
   <Card
-    icon={<UserCheck className="w-5 h-5 text-[#e37be1]" />}
+    icon={<UserCheck className="w-4 h-4" />}
     title="Account Linking"
     href="/docs/server-info/account-linking"
-    description="Learn how to link your Discord account with DiscordSRV to play."
+    description="Link your Discord account with DiscordSRV to play."
   />
   <Card
-    icon={<ShieldAlert className="w-5 h-5 text-[#85e2de]" />}
+    icon={<ShieldAlert className="w-4 h-4" />}
     title="Server Rules"
     href="/docs/rules"
-    description="Review community rules on land claims, griefing, and allowed mods."
+    description="Review community rules on claims, griefing, and allowed mods."
   />
   <Card
-    icon={<Blocks className="w-5 h-5 text-[#eddaa6]" />}
+    icon={<Blocks className="w-4 h-4" />}
     title="Plugin Info"
     href="/docs/plugins"
     description="Explore claims, trade shops, warps, and server mechanics."
@@ -33,21 +33,19 @@ Welcome to **ALNSTCRAFT**! Below you will find quick access to server connection
 
 ## Connection Info
 
-Use the interactive cards below to copy the server address or Bedrock port[cite: 3]:
-
 <ServerIPWidget />
 
-## Server Requirements
+## Requirements
 
-To access ALNSTCRAFT, you must meet standard Minecraft system requirements and hold at least one of the required roles in the Discord server[cite: 3]:
+To access ALNSTCRAFT, you must hold at least one of the required roles in the Discord server:
 
 <DiscordRoleGroup>
-  <DiscordRole name="VIVIs" roleId="1492874037137903689" variant="holographic" description="Holographic VIVIs Member Role" />
-  <DiscordRole name="MC Access" roleId="1552864397427347568" description="Standard Minecraft Access Role" />
-  <DiscordRole name="MC Tester" roleId="1551702836277149726" description="Beta Testing & Early Access" />
-  <DiscordRole name="Moderators" roleId="1552087137891917824" description="Server Staff & Team" />
+  <DiscordRole name="VIVIs" roleId="1492874037137903689" variant="holographic" />
+  <DiscordRole name="MC Access" roleId="1552864397427347568" />
+  <DiscordRole name="MC Tester" roleId="1551702836277149726" />
+  <DiscordRole name="Moderators" roleId="1552087137891917824" />
 </DiscordRoleGroup>
 
 <Callout type="info">
-  Haven't linked your account yet? Head over to the [Account Linking Guide](/docs/server-info/account-linking) to get started!
+  Haven't linked your account yet? Head over to [Account Linking](/docs/server-info/account-linking) to get started.
 </Callout>

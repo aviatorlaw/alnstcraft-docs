@@ -2,7 +2,8 @@ import { llms, loader } from 'fumadocs-core/source';
 import { docsContentRoute, docsImageRoute, docsRoute } from './shared';
 import { defineDocs } from 'fumadocs-mdx/macro';
 import { metaSchema, pageSchema } from 'fumadocs-core/source/schema';
-import { BookAlert, HouseHeart, Server, HeartHandshake, Link, ListSortDescending, Hammer, ShieldAlert, Wrench, Bolt, MapPinHouse, LandPlot, Store, Swords } from 'lucide-react';
+import { icons } from 'lucide-react';
+import { createElement } from 'react';
 
 const docs = defineDocs({
   dir: 'content/docs',
@@ -22,6 +23,12 @@ export const source = loader({
   baseUrl: docsRoute,
   source: docs.toFumadocsSource(),
   plugins: [],
+  icon(icon) {
+    if (!icon) return;
+    if (icon in icons) {
+      return createElement(icons[icon as keyof typeof icons]);
+    }
+  },
 });
 
 export const docsLlms = llms(source, {

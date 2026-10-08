@@ -52,7 +52,7 @@ export default function HomePage() {
           </a>
 
           <Link
-            href="/docs"
+            href="/docs/server-info"
             className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/90 px-6 py-2.5 text-sm font-semibold text-slate-200 transition-all hover:border-slate-500 hover:bg-slate-800 hover:text-white active:scale-95"
           >
             <BookOpen className="h-4 w-4 text-slate-400" />

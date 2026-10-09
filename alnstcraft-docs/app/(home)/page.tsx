@@ -1,6 +1,11 @@
 import Link from 'next/link';
 import { BookOpen, Disc as Discord, CloudLightning, ShieldCheck, Ampersands } from 'lucide-react';
-import { MeshGradient } from '@/components/mesh-gradient';
+import dynamic from 'next/dynamic';
+
+const PaperShaderBackground = dynamic(
+  () => import('@/components/paper-shader').then((mod) => mod.PaperShaderBackground),
+  { ssr: false }
+);
 
 export default function HomePage() {
   return (
@@ -11,8 +16,8 @@ export default function HomePage() {
           {/* Main Hero Card Container */}
           <div className="relative mx-auto flex h-[87vh] w-full max-w-[1400px] overflow-hidden border bg-origin-border *:text-center max-xl:h-screen xl:max-h-[850px] xl:rounded-2xl">
             
-            {/* Paper-style Animated Shader Background */}
-            <MeshGradient />
+            {/* Native Paper Shader Canvas Background */}
+            <PaperShaderBackground />
 
             <div className="z-2 flex size-full flex-col justify-center px-4 max-xl:!pt-32 md:p-12 max-md:items-center max-md:text-center">
               
@@ -37,7 +42,7 @@ export default function HomePage() {
                 </span>
                 <span className="text-slate-300">
                   <ShieldCheck className="h-4 w-4 text-[#85e2de]" />
-                  <span>DiscordSRV Whitelist</span>
+                  <span>DiscordSRV Access</span>
                 </span>
                 <span className="text-slate-300">
                   <Ampersands className="h-4 w-4 text-[#e37be1]" />
@@ -54,10 +59,9 @@ export default function HomePage() {
                   rel="noreferrer"
                 >
                   <Discord className="h-4 w-4" />
-                  <span>Join Discord</span>
+                  <span>Discord</span>
                 </a>
 
-                {/* Updated Target Route */}
                 <Link
                   className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/80 px-5 py-3 text-sm font-medium tracking-tight text-slate-200 transition-colors hover:border-slate-500 hover:bg-slate-800"
                   href="/docs/server-info"

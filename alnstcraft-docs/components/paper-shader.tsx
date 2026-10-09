@@ -15,7 +15,7 @@ export function PaperShaderBackground() {
         distortion={0.65}
         swirl={0.4}
         grainMixer={0.75}
-        grainOverlay={0.6}
+        grainOverlay={0.75}
         scale={1.1}
         className="size-full object-cover opacity-90"
       />

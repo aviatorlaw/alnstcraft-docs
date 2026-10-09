@@ -11,9 +11,9 @@ export default function HomePage() {
         <div className="xl:px-3">
           
           {/* Main Hero Card Container */}
-          <div className="relative mx-auto flex h-[87vh] w-full max-w-[1400px] overflow-hidden border border-slate-800 bg-[#090a10] bg-origin-border *:text-center max-xl:h-screen xl:max-h-[850px] xl:rounded-2xl">
+          <div className="relative mx-auto flex h-[87vh] w-full max-w-[1400px] overflow-hidden border border-slate-800/80 bg-[#090a10] bg-origin-border *:text-center max-xl:h-screen xl:max-h-[850px] xl:rounded-2xl">
             
-            {/* Dark Grain & Shader Backdrop */}
+            {/* Native Canvas Shader Background */}
             <PaperShaderBackground />
 
             <div className="z-2 flex size-full flex-col justify-center px-4 max-xl:!pt-32 md:p-12 max-md:items-center max-md:text-center">
@@ -53,7 +53,7 @@ export default function HomePage() {
                   rel="noreferrer"
                 >
                   <Discord className="h-4 w-4" />
-                  <span>Join Discord</span>
+                  <span>Discord</span>
                 </a>
 
                 <Link

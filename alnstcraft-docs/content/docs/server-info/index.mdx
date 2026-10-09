@@ -1,30 +1,62 @@
 ---
 title: Welcome to ALNSTCRAFT
-description: The Minecraft server for .gg/vivinos
+description: The official Minecraft server documentation for .gg/vivinos
 icon: HeartHandshake
 ---
 
-Welcome to ALNSTCRAFT! Below is the connection information and basic requirements to play on the server.
+import { Cards, Card } from 'fumadocs-ui/components/card';
+import { Callout } from 'fumadocs-ui/components/callout';
+import { UserCheck, ShieldAlert, Blocks, HelpCircle, Compass } from 'lucide-react';
+
+Welcome to **ALNSTCRAFT**! Below you will find quick access to server connection details, rules, plugin guides, and troubleshooting steps.
 
 <Cards>
-  <Card title="Account Linking" href="/docs/server-info/account-linking">
-    Learn how to link your Discord account to join the server.
-  </Card>
-  <Card title="Server Rules" href="/docs/rules">
-    Read the rules before you start playing.
-  </Card>
+  <Card
+    icon={<UserCheck className="w-4 h-4" />}
+    title="Account Linking"
+    href="/docs/server-info/account-linking"
+    description="Learn how to link your Discord account with DiscordSRV to play."
+  />
+  <Card
+    icon={<HelpCircle className="w-4 h-4" />}
+    title="Troubleshooting"
+    href="/docs/server-info/troubleshooting"
+    description="Fix common linking issues, missing roles, or LuckPerms sync delays."
+  />
+  <Card
+    icon={<ShieldAlert className="w-4 h-4" />}
+    title="Server Rules"
+    href="/docs/rules"
+    description="Review community rules on claims, griefing, and allowed mods."
+  />
+  <Card
+    icon={<Blocks className="w-4 h-4" />}
+    title="Plugin Info"
+    href="/docs/plugins"
+    description="Explore claims, trade shops, warps, and server mechanics."
+  />
 </Cards>
 
 ## Connection Info
 
-* **IP:** `mc.alnstcord.xyz`
-* **Bedrock Port:** `25599`
-* **Version:** Native for 26.2, with support for 1.8+
+* **Java IP**: `mc.alnstcord.xyz`
+* **Bedrock Port**: `25599`
+* **Version**: Native for 1.21+, with backwards compatibility for 1.8+
 
-## Requirements
+## World Boundaries
 
-To join ALNSTCRAFT, your device must meet the standard system requirements to run Minecraft (Java or Bedrock). You must also have one of the required Discord roles.
+<Callout type="info" icon={<Compass className="w-4 h-4" />}>
+  **Overworld Border**: The Overworld border is currently set to **10,000 blocks** out in each direction from spawn ($x=\pm10,000$, $z=\pm10,000$).
+</Callout>
 
-<Callout type="info">
-  Haven't linked your account yet? Head over to [Account Linking](/docs/server-info/account-linking) to get started.
+## Server Requirements
+
+To access ALNSTCRAFT, you must hold at least one of the required roles in the Discord server:
+* `@VIVIs`
+* `@MC Access`
+* `@MC Tester`
+* `@Moderators`
+
+<Callout type="warn">
+  Haven't linked your account or running into issues? Head over to the [Account Linking Guide](/docs/server-info/account-linking) or check our [Troubleshooting Guide](/docs/server-info/troubleshooting).
 </Callout>

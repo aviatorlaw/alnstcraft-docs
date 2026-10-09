@@ -1,0 +1,66 @@
+---
+title: Troubleshooting & Support
+description: Solutions for DiscordSRV linking issues, missing server permissions, and how to get help
+icon: HelpCircle
+---
+
+import { Callout } from 'fumadocs-ui/components/callout';
+import { Steps, Step } from 'fumadocs-ui/components/steps';
+
+If you are having trouble joining ALNSTCRAFT or linking your account, review the common solutions below before opening a support ticket.
+
+## DiscordSRV & Account Linking Issues
+
+### Bot Cannot DM You
+If you execute the link command in-game and the Discord bot fails to send you a direct message, your Discord privacy settings are blocking direct messages from server members.
+
+<Steps>
+  <Step>
+    #### Open Discord User Settings
+    Click the **Gear icon** next to your profile in Discord.
+  </Step>
+  <Step>
+    #### Navigate to Privacy & Safety
+    Go to **Privacy & Safety** in the left sidebar menu.
+  </Step>
+  <Step>
+    #### Enable Direct Messages
+    Toggle **"Allow direct messages from server members"** to **ON** for the `.gg/vivinos` server.
+  </Step>
+  <Step>
+    #### Retry Linking
+    Re-run the linking command in-game to receive your verification code.
+  </Step>
+</Steps>
+
+---
+
+## Connection & Access Issues
+
+### Unable to Join After Linking (Role Missing)
+If your account is linked but you receive a permission or whitelist error when attempting to join the Minecraft server, your Discord account is missing a required role.
+
+To access ALNSTCRAFT, your Discord account must hold **at least one** of the following roles:
+* `@VIVIs`
+* `@MC Access`
+* `@MC Tester`
+* `@Moderators`
+
+<Callout type="warn">
+  If you believe you should have access, check your Discord profile roles in the `.gg/vivinos` server to confirm you hold at least one of these roles.
+</Callout>
+
+### Booster Perk / LuckPerms Sync Delays
+If you recently boosted the Discord server or were assigned a new role but your permissions or perks have not updated in-game, there may be a temporary LuckPerms sync delay.
+
+* **Re-log**: Disconnect and rejoin the server to force a permission update.
+* **Wait for Sync**: Role synchronizations usually complete within a few minutes. If perks are still missing after 15 minutes, reach out in support.
+
+---
+
+## Getting Further Support
+
+If your issue persists or isn't listed here, you can open a support ticket with our moderation team:
+
+* **In-Server Support**: Head to the **`#support`** channel under the **Minecraft** category in our Discord server.
+* **Main Server Support**: If you are banned from the Minecraft server or cannot view the Minecraft category, open a general support ticket in the main Discord server support channel.

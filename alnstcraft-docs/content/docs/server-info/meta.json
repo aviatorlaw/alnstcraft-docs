@@ -4,6 +4,7 @@
   "icon": "HouseHeart",
   "pages": [
     "index",
-    "account-linking.mdx"
+    "account-linking",
+    "troubleshooting"
   ]
 }

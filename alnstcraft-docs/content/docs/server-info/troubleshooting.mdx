@@ -1,18 +1,18 @@
 ---
 title: Troubleshooting & Support
 description: Solutions for DiscordSRV linking issues, missing server permissions, and how to get help
-icon: HelpCircle
+icon: Bug
 ---
 
 import { Callout } from 'fumadocs-ui/components/callout';
 import { Steps, Step } from 'fumadocs-ui/components/steps';
 
-If you are having trouble joining ALNSTCRAFT or linking your account, review the common solutions below before opening a support ticket.
+If you are having trouble joining ALNSTCRAFT or linking your account, check out the answers below before opening a ticket.
 
 ## DiscordSRV & Account Linking Issues
 
-### Bot Cannot DM You
-If you execute the link command in-game and the Discord bot fails to send you a direct message, your Discord privacy settings are blocking direct messages from server members.
+### I can't send the code to the bot.
+If you DM the bot the code given to you and are hit with "Your message could not be delivered", your Discord privacy settings could be blocking direct messages from server members.
 
 <Steps>
   <Step>
@@ -25,11 +25,11 @@ If you execute the link command in-game and the Discord bot fails to send you a 
   </Step>
   <Step>
     #### Enable Direct Messages
-    Toggle **"Allow direct messages from server members"** to **ON** for the `.gg/vivinos` server.
+    Toggle **"Allow direct messages from server members"** to **ON** for `Alien Stage`.
   </Step>
   <Step>
     #### Retry Linking
-    Re-run the linking command in-game to receive your verification code.
+    Try send the code to the bot again before rejoining.
   </Step>
 </Steps>
 
@@ -37,8 +37,8 @@ If you execute the link command in-game and the Discord bot fails to send you a 
 
 ## Connection & Access Issues
 
-### Unable to Join After Linking (Role Missing)
-If your account is linked but you receive a permission or whitelist error when attempting to join the Minecraft server, your Discord account is missing a required role.
+### I should have access to the server, yet it doesn't let me in.
+If your account is linked but you are still not allowed to join the Minecraft server, your Discord account may be missing a required role.
 
 To access ALNSTCRAFT, your Discord account must hold **at least one** of the following roles:
 * `@VIVIs`
@@ -47,20 +47,17 @@ To access ALNSTCRAFT, your Discord account must hold **at least one** of the fol
 * `@Moderators`
 
 <Callout type="warn">
-  If you believe you should have access, check your Discord profile roles in the `.gg/vivinos` server to confirm you hold at least one of these roles.
+  If you have one of the roles above and are still being kicked, open a ticket.
 </Callout>
 
-### Booster Perk / LuckPerms Sync Delays
-If you recently boosted the Discord server or were assigned a new role but your permissions or perks have not updated in-game, there may be a temporary LuckPerms sync delay.
+### I haven't gottem my Booster rank yet?
+If you boosted the Discord server but your permissions or perks have not updated in-game, LuckPerms may not be working properly with DiscordSRV.
 
 * **Re-log**: Disconnect and rejoin the server to force a permission update.
-* **Wait for Sync**: Role synchronizations usually complete within a few minutes. If perks are still missing after 15 minutes, reach out in support.
+* **Wait for Sync**: DiscordSRV usually resyncs every few minutes for all online players. If your rank is still missing after 15 minutes, open a ticket.
 
 ---
 
-## Getting Further Support
-
-If your issue persists or isn't listed here, you can open a support ticket with our moderation team:
-
-* **In-Server Support**: Head to the **`#support`** channel under the **Minecraft** category in our Discord server.
-* **Main Server Support**: If you are banned from the Minecraft server or cannot view the Minecraft category, open a general support ticket in the main Discord server support channel.
+<Callout type="info">
+  If your issue persists or isn't listed here, you can open a support ticket with our moderation team.
+</Callout>

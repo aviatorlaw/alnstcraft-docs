@@ -2,12 +2,7 @@
 
 import Link from 'next/link';
 import { BookOpen, Disc as Discord, CloudLightning, ShieldCheck, Ampersands } from 'lucide-react';
-import dynamic from 'next/dynamic';
-
-const PaperShaderBackground = dynamic(
-  () => import('@/components/paper-shader').then((mod) => mod.PaperShaderBackground),
-  { ssr: false }
-);
+import { PaperShaderBackground } from '@/components/paper-shader';
 
 export default function HomePage() {
   return (
@@ -16,34 +11,31 @@ export default function HomePage() {
         <div className="xl:px-3">
           
           {/* Main Hero Card Container */}
-          <div className="relative mx-auto flex h-[87vh] w-full max-w-[1400px] overflow-hidden border bg-origin-border *:text-center max-xl:h-screen xl:max-h-[850px] xl:rounded-2xl">
+          <div className="relative mx-auto flex h-[87vh] w-full max-w-[1400px] overflow-hidden border border-slate-800 bg-[#090a10] bg-origin-border *:text-center max-xl:h-screen xl:max-h-[850px] xl:rounded-2xl">
             
-            {/* Native Paper Shader Canvas Background */}
+            {/* Dark Grain & Shader Backdrop */}
             <PaperShaderBackground />
 
             <div className="z-2 flex size-full flex-col justify-center px-4 max-xl:!pt-32 md:p-12 max-md:items-center max-md:text-center">
               
               {/* Title */}
-              <h1 className="text-balance pb-5 text-center text-3xl font-medium tracking-tighter md:text-4xl lg:text-5xl xl:text-6xl text-white">
-                Welcome to{' '}
-                <span className="bg-gradient-to-r from-[#e37be1] via-[#85e2de] to-[#e37be1] bg-clip-text text-transparent">
-                  ALNSTCRAFT
-                </span>
+              <h1 className="text-balance pb-3 text-center text-3xl font-semibold tracking-tighter text-white md:text-5xl lg:text-6xl">
+                Welcome to <span className="text-[#e37be1]">ALNSTCRAFT</span>
               </h1>
 
               {/* Subtitle */}
-              <p className="text-balance pb-3 text-center text-base font-medium leading-relaxed tracking-tight text-slate-300 md:text-lg">
+              <p className="text-balance pb-4 text-center text-base font-medium leading-relaxed tracking-tight text-slate-400 md:text-lg">
                 sua dies btw!!!
               </p>
 
               {/* Requirements / Info Badges */}
-              <span className="flex items-center justify-center gap-3 lg:mb-9 max-lg:hidden *:flex *:items-center *:gap-2 *:text-xs *:justify-center">
+              <span className="flex items-center justify-center gap-4 lg:mb-8 max-lg:hidden *:flex *:items-center *:gap-2 *:text-xs *:justify-center">
                 <span className="text-slate-300">
                   <CloudLightning className="h-4 w-4 text-[#e37be1]" />
                   <span>Minecraft 1.8 - 1.21+</span>
                 </span>
                 <span className="text-slate-300">
-                  <ShieldCheck className="h-4 w-4 text-[#85e2de]" />
+                  <ShieldCheck className="h-4 w-4 text-[#e37be1]" />
                   <span>DiscordSRV Access</span>
                 </span>
                 <span className="text-slate-300">
@@ -53,19 +45,19 @@ export default function HomePage() {
               </span>
 
               {/* Action Buttons */}
-              <div className="flex w-full flex-wrap items-center justify-center gap-4 pt-4">
+              <div className="flex w-full flex-wrap items-center justify-center gap-3 pt-2">
                 <a
-                  className="inline-flex items-center gap-2 rounded-full bg-[#e37be1] px-5 py-3 text-sm font-medium tracking-tight text-slate-950 transition-colors hover:bg-[#e37be1]/90"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#e37be1] px-6 py-2.5 text-sm font-semibold tracking-tight text-slate-950 transition-all hover:bg-[#e37be1]/90 active:scale-95"
                   href="https://discord.gg/vivinos"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <Discord className="h-4 w-4" />
-                  <span>Discord</span>
+                  <span>Join Discord</span>
                 </a>
 
                 <Link
-                  className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/80 px-5 py-3 text-sm font-medium tracking-tight text-slate-200 transition-colors hover:border-slate-500 hover:bg-slate-800"
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-700/80 bg-slate-900/90 px-6 py-2.5 text-sm font-semibold tracking-tight text-slate-200 transition-all hover:border-slate-500 hover:bg-slate-800 hover:text-white active:scale-95"
                   href="/docs/server-info"
                 >
                   <BookOpen className="h-4 w-4 text-slate-400" />

@@ -1,41 +1,47 @@
 import Link from 'next/link';
-import { HomeLayout } from 'fumadocs-ui/layouts/home';
+import { BookOpen, Disc as Discord } from 'lucide-react';
 
 export default function HomePage() {
   return (
-    <HomeLayout nav={{ title: 'ALNSTCRAFT' }}>
-      <div className="relative flex flex-1 flex-col items-center justify-center text-center px-4 py-24 md:py-32">
-        {/* Native Fumadocs Radial Glow Background */}
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.15),rgba(255,255,255,0))]" />
+    <main className="flex min-h-[calc(100vh-3.5rem)] flex-col items-center justify-center p-4 md:p-8">
+      {/* PluralBuddy Card Wrapper */}
+      <div className="relative flex w-full max-w-5xl flex-col items-center justify-center overflow-hidden rounded-2xl border border-fd-border bg-fd-card px-6 py-16 text-center shadow-lg md:py-24">
         
-        {/* Hero Content */}
+        {/* Fumadocs Ambient Glow */}
+        <div className="pointer-events-none absolute -top-24 left-1/2 -z-10 h-[350px] w-[500px] -translate-x-1/2 rounded-full bg-fd-primary/15 blur-[100px]" />
+
+        {/* Hero Title */}
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl md:text-7xl text-fd-foreground">
           Welcome to <span className="text-fd-primary">ALNSTCRAFT</span>
         </h1>
 
-        <p className="mt-4 max-w-xl text-base text-fd-muted-foreground sm:text-lg">
-          sua dies btw!!!
+        {/* Subtitle */}
+        <p className="mt-4 max-w-xl text-base font-medium text-fd-muted-foreground sm:text-lg">
+          sua dues btw!!!
         </p>
 
-        {/* Hero Actions */}
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <Link
-            href="/docs/server-info"
-            className="inline-flex h-11 items-center justify-center rounded-md bg-fd-primary px-8 text-sm font-medium text-fd-primary-foreground shadow transition-colors hover:bg-fd-primary/90"
-          >
-            Documentation
-          </Link>
-
+        {/* Action Buttons */}
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a
             href="https://discord.gg/vivinos"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex h-11 items-center justify-center rounded-md border border-fd-border bg-fd-secondary/50 px-8 text-sm font-medium text-fd-secondary-foreground transition-colors hover:bg-fd-accent hover:text-fd-accent-foreground"
+            className="inline-flex items-center gap-2 rounded-full bg-fd-primary px-6 py-2.5 text-sm font-semibold text-fd-primary-foreground transition-all hover:opacity-90 active:scale-95"
           >
-            Join Discord
+            <Discord className="h-4 w-4" />
+            <span>Join Discord</span>
           </a>
+
+          <Link
+            href="/docs/server-info"
+            className="inline-flex items-center gap-2 rounded-full border border-fd-border bg-fd-secondary px-6 py-2.5 text-sm font-semibold text-fd-secondary-foreground transition-all hover:bg-fd-accent hover:text-fd-accent-foreground active:scale-95"
+          >
+            <BookOpen className="h-4 w-4 text-fd-muted-foreground" />
+            <span>Documentation</span>
+          </Link>
         </div>
+
       </div>
-    </HomeLayout>
+    </main>
   );
 }

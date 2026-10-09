@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { BookOpen, Disc as Discord, CloudLightning, ShieldCheck, Ampersands } from 'lucide-react';
 import dynamic from 'next/dynamic';

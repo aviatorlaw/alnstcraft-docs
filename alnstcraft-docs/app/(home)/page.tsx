@@ -1,47 +1,78 @@
 import Link from 'next/link';
-import { BookOpen, Disc as Discord } from 'lucide-react';
+import { BookOpen, Disc as Discord, CloudLightning, ShieldX, Ampersands } from 'lucide-react';
+import { FlickeringGrid } from '@/components/flickering-grid';
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-[calc(100vh-3.5rem)] flex-col items-center justify-center p-4 md:p-8">
-      {/* PluralBuddy Card Wrapper */}
-      <div className="relative flex w-full max-w-5xl flex-col items-center justify-center overflow-hidden rounded-2xl border border-fd-border bg-fd-card px-6 py-16 text-center shadow-lg md:py-24">
-        
-        {/* Fumadocs Ambient Glow */}
-        <div className="pointer-events-none absolute -top-24 left-1/2 -z-10 h-[350px] w-[500px] -translate-x-1/2 rounded-full bg-fd-primary/15 blur-[100px]" />
+    <div className="xl:pt-8 justify-center text-center flex-1 xl:mx-30 xl:border-x">
+      <div className="overflow-clip z-1 relative bg-background rounded-b-3xl border-b">
+        <div className="xl:px-3">
+          
+          {/* Main Hero Card Container */}
+          <div className="relative flex h-[87vh] max-xl:h-screen xl:max-h-[850px] *:text-center border xl:rounded-2xl overflow-hidden mx-auto w-full max-w-[1400px] bg-origin-border">
+            
+            {/* Ambient Radial Gradient Background */}
+            <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(227,123,225,0.18),rgba(255,255,255,0))]" />
 
-        {/* Hero Title */}
-        <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl md:text-7xl text-fd-foreground">
-          Welcome to <span className="text-fd-primary">ALNSTCRAFT</span>
-        </h1>
+            <div className="flex flex-col z-2 px-4 size-full max-xl:!pt-32 md:p-12 max-md:items-center max-md:text-center justify-center">
+              
+              {/* Title */}
+              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium tracking-tighter text-balance text-center pb-5">
+                <span className="text-[#e37be1]">ALNSTCRAFT</span>
+              </h1>
 
-        {/* Subtitle */}
-        <p className="mt-4 max-w-xl text-base font-medium text-fd-muted-foreground sm:text-lg">
-          sua dues btw!!!
-        </p>
+              {/* Subtitle */}
+              <p className="text-base md:text-lg text-center text-muted-foreground font-medium text-balance leading-relaxed tracking-tight pb-3">
+                sua dies btw!!!
+              </p>
 
-        {/* Action Buttons */}
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <a
-            href="https://discord.gg/vivinos"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-fd-primary px-6 py-2.5 text-sm font-semibold text-fd-primary-foreground transition-all hover:opacity-90 active:scale-95"
-          >
-            <Discord className="h-4 w-4" />
-            <span>Join Discord</span>
-          </a>
+              {/* Badges */}
+              <span className="flex items-center justify-center gap-3 *:flex *:items-center *:text-xs *:justify-center *:gap-2 lg:mb-9 max-lg:hidden">
+                <span>
+                  <CloudLightning className="w-4 h-4 text-[#e37be1]" />
+                  <span>Minecraft 1.8 - 1.21+</span>
+                </span>
+                <span>
+                  <ShieldX className="w-4 h-4 text-[#e37be1]" />
+                  <span>DiscordSRV Access</span>
+                </span>
+                <span>
+                  <Ampersands className="w-4 h-4 text-[#e37be1]" />
+                  <span>Java & Bedrock Crossplay</span>
+                </span>
+              </span>
 
-          <Link
-            href="/docs/server-info"
-            className="inline-flex items-center gap-2 rounded-full border border-fd-border bg-fd-secondary px-6 py-2.5 text-sm font-semibold text-fd-secondary-foreground transition-all hover:bg-fd-accent hover:text-fd-accent-foreground active:scale-95"
-          >
-            <BookOpen className="h-4 w-4 text-fd-muted-foreground" />
-            <span>Documentation</span>
-          </Link>
+              {/* Action Buttons */}
+              <div className="flex w-full items-center justify-center gap-4 flex-wrap pt-4">
+                <a
+                  className="inline-flex justify-center px-5 py-3 rounded-full font-medium tracking-tight transition-colors bg-[#e37be1] text-slate-950 hover:bg-[#e37be1]/90 max-sm:text-sm items-center gap-2"
+                  href="https://discord.gg/vivinos"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Discord className="w-4 h-4" />
+                  Discord
+                </a>
+                <Link
+                  className="inline-flex justify-center px-5 py-3 rounded-full font-medium tracking-tight transition-colors border bg-fd-secondary text-fd-secondary-foreground hover:bg-fd-accent max-sm:text-sm items-center gap-2"
+                  href="/docs/server-info"
+                >
+                  <BookOpen className="w-4 h-4" />
+                  Documentation
+                </Link>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        {/* Flickering Grid Banner */}
+        <div className="relative overflow-hidden w-full h-[200px] my-4 flex items-center justify-center">
+          <FlickeringGrid color="#e37be1" squareSize={4} gridGap={6} maxOpacity={0.4} />
         </div>
 
       </div>
-    </main>
+    </div>
   );
 }
